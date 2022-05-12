@@ -1,0 +1,17 @@
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  background-color: var(--main-color);
+}
+.footer-marquee {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+.footer-marquee__link {
+  text-decoration: none;
+  color: var(--text-color-accent);
+}
