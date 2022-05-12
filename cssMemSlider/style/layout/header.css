@@ -3,13 +3,32 @@
   align-items: center;
   justify-content: center;
   height: 10vh;
-  padding: 0 3%;
+  padding: 0 calc(0.625rem * 4);
   background-color: var(--main-color);
 }
 .main-title {
   margin: 0;
   font-family: var(--main-font);
   font-weight: 700;
-  font-size: 3rem;
+  font-size: calc(0.625rem * 4.8);
   color: var(--text-color);
+}
+
+@media (max-width: 1279px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+  .header__inner {
+    height: 10vh;
+    padding: 0 calc(0.625rem * 2);
+  }
+  .main-title {
+    font-size: calc(0.625rem * 3.2);
+  }
+}
+@media (max-width: 575px) {
+  .main-title {
+    font-size: calc(0.625rem * 2);
+  }
 }

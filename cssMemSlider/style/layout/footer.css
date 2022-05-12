@@ -8,10 +8,21 @@
 .footer-marquee {
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: calc(0.625rem * 2);
   color: var(--text-color);
 }
 .footer-marquee__link {
   text-decoration: none;
   color: var(--text-color-accent);
+}
+@media (max-width: 1279px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+  .footer-marquee {
+    font-size: calc(0.625rem * 1.6);
+  }
+}
+@media (max-width: 575px) {
 }
