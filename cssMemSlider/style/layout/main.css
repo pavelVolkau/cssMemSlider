@@ -6,39 +6,25 @@
   padding: 0 calc(0.625rem * 4);
   background-color: var(--second-color);
 }
+.input {
+  display: none;
+}
 .main__slider {
   width: calc(0.625rem * 80);
-  background-color: pink;
   display: grid;
   grid-template-areas:
     'slider slider'
     'caption control';
   gap: calc(0.625rem * 2);
 }
-.main__slider-container {
-  grid-area: slider;
-  background-color: green;
-  height: calc(0.625rem * 45);
-  width: 100%;
-  border-radius: calc(0.625rem * 1);
-}
-.main__slider-caption {
-  grid-area: caption;
-}
-.main__slider-caption_span {
-  font-family: var(--main-font);
-  font-weight: 400;
-  font-size: calc(0.625rem * 2);
-  color: var(--text-color);
-}
 .main__slider-control {
   width: calc(0.625rem * 10);
   grid-area: control;
   justify-self: end;
-}
-.label-wrapper {
+  align-self: start;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex: 1 1 auto;
 }
 .label {
@@ -46,7 +32,7 @@
   cursor: pointer;
   width: 25%;
 }
-.label-icon {
+[class^='label-icon'] {
   width: calc(0.625rem * 1.5);
   height: calc(0.625rem * 1.5);
   margin: 0 auto;
@@ -54,13 +40,72 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.label:hover > .label-icon {
+.label:hover > [class^='label-icon'] {
   background-color: var(--text-color-accent);
 }
-.input {
-  display: none;
+#slide1:checked ~ .main__slider-control .label-icon1,
+#slide2:checked ~ .main__slider-control .label-icon2,
+#slide3:checked ~ .main__slider-control .label-icon3,
+#slide4:checked ~ .main__slider-control .label-icon4 {
+  border: none;
+  background-color: var(--dark-color);
 }
-
+.main__slider-caption {
+  grid-area: caption;
+  display: grid;
+  grid-template-areas: 'allcaption';
+  overflow: hidden;
+  height: calc(0.625rem * 5);
+}
+.main__slider-caption span {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: calc(0.625rem * 2);
+  color: var(--text-color);
+  grid-area: allcaption;
+  transform: translateX(-100%);
+  transition: all ease-in-out 500ms;
+}
+#slide1:checked ~ .main__slider-caption .caption_slide1,
+#slide2:checked ~ .main__slider-caption .caption_slide2,
+#slide3:checked ~ .main__slider-caption .caption_slide3,
+#slide4:checked ~ .main__slider-caption .caption_slide4 {
+  transform: translateX(0);
+}
+.main__slider-container {
+  grid-area: slider;
+  overflow: hidden;
+  height: calc(0.625rem * 45);
+  width: 100%;
+  border-radius: calc(0.625rem * 1);
+  display: grid;
+  grid-template-areas: 'slides';
+}
+[class^='slide'] {
+  grid-area: slides;
+  background: center / contain no-repeat;
+  height: auto;
+  transform: translateX(+100%);
+  transition: all ease-in-out 500ms;
+}
+.slide1 {
+  background-image: url('../../assets/images/stackoverflow.jpg');
+}
+.slide2 {
+  background-image: url('../../assets/images/dvd.jpg');
+}
+.slide3 {
+  background-image: url('../../assets/images/variable.jpg');
+}
+.slide4 {
+  background-image: url('../../assets/images/clean-code.jpg');
+}
+#slide1:checked ~ .main__slider-container .slide1,
+#slide2:checked ~ .main__slider-container .slide2,
+#slide3:checked ~ .main__slider-container .slide3,
+#slide4:checked ~ .main__slider-container .slide4 {
+  transform: translateX(0);
+}
 @media (max-width: 1279px) {
 }
 @media (max-width: 991px) {
