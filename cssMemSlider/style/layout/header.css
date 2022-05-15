@@ -32,3 +32,8 @@
     font-size: calc(0.625rem * 2);
   }
 }
+@media (max-height: 575px) {
+  .main-title {
+    font-size: calc(0.625rem * 2);
+  }
+}

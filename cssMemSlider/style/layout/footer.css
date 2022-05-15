@@ -26,3 +26,8 @@
 }
 @media (max-width: 575px) {
 }
+@media (max-height: 575px) {
+  .footer-marquee {
+    font-size: calc(0.625rem * 1.6);
+  }
+}
