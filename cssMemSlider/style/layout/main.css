@@ -30,14 +30,16 @@
   flex: 1 1 auto;
 }
 .label {
-  display: inline-block;
+  display: flex;
   cursor: pointer;
   width: 25%;
+  height: calc(0.625rem * 2.5);
+  justify-content: center;
+  align-items: center;
 }
 [class^='label-icon'] {
   width: calc(0.625rem * 1.5);
   height: calc(0.625rem * 1.5);
-  margin: 0 auto;
   border: calc(0.625rem / 10) solid var(--dark-color);
   border-radius: 50%;
   cursor: pointer;
