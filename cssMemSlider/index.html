@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mem Slider</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
+  <link rel="manifest" href="assets/icon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <h1 class="main-title">Мемасный слайдер</h1>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main__inner">
+          <div class="main__slider">
+            <input class="input" type="radio" name="point" id="slide1" checked>
+            <input class="input" type="radio" name="point" id="slide2">
+            <input class="input" type="radio" name="point" id="slide3">
+            <input class="input" type="radio" name="point" id="slide4">
+            <div class="main__slider-control">
+              <label class="label" for="slide1">
+                <div class="label-icon1"></div>
+              </label>
+              <label class="label" for="slide2">
+                <div class="label-icon2"></div>
+              </label>
+              <label class="label" for="slide3">
+                <div class="label-icon3"></div>
+              </label>
+              <label class="label" for="slide4">
+                <div class="label-icon4"></div>
+              </label>
+            </div>
+            <div class="main__slider-caption">
+              <span class="caption_slide1">лол — laughing out loud</span>
+              <span class="caption_slide2">рофл — rolling on the floor laughing</span>
+              <span class="caption_slide3">мем — единица значимой для культуры информации</span>
+              <span class="caption_slide4">лол, кек — чебурек</span>
+            </div>
+            <div class="main__slider-container">
+
+              <div class="slide1"></div>
+              <div class="slide2"></div>
+              <div class="slide3"></div>
+              <div class="slide4"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <marquee class="footer-marquee">Наука о мемах называется <a class="footer-marquee__link"
+              href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%B5%D1%82%D0%B8%D0%BA%D0%B0"
+              target="_blank">Меметика</a>&emsp;&emsp;-&emsp;&emsp;Приблизительно, самый первый мем, был обнаружен на
+            руинах
+            Помпеи(79 г. н. э.)&emsp;&emsp;-&emsp;&emsp;Самый первый мем в том виде, в
+            которои мы его понимаем, датируется 1920г.&emsp;&emsp;-&emsp;&emsp;Laina Morris заработала на продаже своего
+            мема 200ETH&emsp;&emsp;-&emsp;&emsp;Существуют
+            календари мемов, по ним можно быстро узнать что происходило в то или иное время</marquee>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
